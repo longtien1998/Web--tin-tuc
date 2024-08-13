@@ -39,7 +39,7 @@ class AuthController extends Controller
         'access_token' => $token, 'token_type' => 'Bearer',]);
         }
         public function logout() {
-        auth()->user()->tokens->delete();
+        Auth::user()->tokens->delete();
         return ['message' => 'Bạn đã thoát ứng dụng và token đã xóa'];
         }
 }

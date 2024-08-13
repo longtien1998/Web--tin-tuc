@@ -1,3 +1,6 @@
+@php
+$notify=false
+@endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -139,6 +142,7 @@
         </div>
         <!-- End Custom template -->
     </div>
+
     <!--   Core JS Files   -->
     <script src="{{ asset('admin/assets/js/core/jquery-3.7.1.min.js')}}"></script>
     <script src="{{ asset('admin/assets/js/core/popper.min.js')}}"></script>
@@ -203,6 +207,9 @@
             fillColor: "rgba(255, 165, 52, .14)",
         });
     </script>
+
+
+    @yield('notify')
 </body>
 
 </html>

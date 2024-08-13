@@ -38,22 +38,22 @@
                 <li class="nav-item">
                     <a data-bs-toggle="collapse" href="#base">
                         <i class="fas fa-layer-group"></i>
-                        <p>Base</p>
+                        <p>Quản lý tài khoản</p>
                         <span class="caret"></span>
                     </a>
                     <div class="collapse" id="base">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="components/avatars.html">
-                                    <span class="sub-item">Avatars</span>
+                                <a href="{{route( 'admin.account')}}">
+                                    <span class="sub-item">Tài khoản admin</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="components/buttons.html">
-                                    <span class="sub-item">Buttons</span>
+                                <a href="">
+                                    <span class="sub-item">Tài khoản người dùng</span>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="components/gridsystem.html">
                                     <span class="sub-item">Grid System</span>
                                 </a>
@@ -87,7 +87,7 @@
                                 <a href="components/typography.html">
                                     <span class="sub-item">Typography</span>
                                 </a>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </li>

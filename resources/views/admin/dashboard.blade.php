@@ -8,12 +8,12 @@ Admin - Dashboard
         <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
             <div>
                 <h3 class="fw-bold mb-3">Dashboard</h3>
-                <h6 class="op-7 mb-2">Free Bootstrap 5 Admin Dashboard</h6>
+                <h6 class="op-7 mb-2">Chào mừng đến với trang chủ Admin</h6>
             </div>
-            <div class="ms-md-auto py-2 py-md-0">
+            <!-- <div class="ms-md-auto py-2 py-md-0">
                 <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
                 <a href="#" class="btn btn-primary btn-round">Add Customer</a>
-            </div>
+            </div> -->
         </div>
         <div class="row">
             <div class="col-sm-6 col-md-3">
@@ -512,4 +512,23 @@ Admin - Dashboard
         </div>
     </div>
 </div>
+
+@endsection
+@section('notify')
+<script>
+    //Notify
+    "use strict";
+    $.notify({
+        icon: 'icon-bell',
+        title: 'Admin',
+        message: 'Chào mừng đến với trang quản trị ADMIN',
+    }, {
+        type: 'secondary',
+        placement: {
+            from: "top",
+            align: "right"
+        },
+        time: 1000,
+    });
+</script>
 @endsection
