@@ -9,7 +9,7 @@ use App\Models\Tin;
 class TinController extends Controller
 {
     public function index($ten, $url){
-        $namepage = Theloaitin::where('moTa', $ten)->first();
+        $namepage = Theloaitin::where('url', $ten)->first();
         $page = Tin::where('url', $url)->first();
         // dd($page);
         // dd($namepage);

@@ -1,3 +1,6 @@
+@php
+\Carbon\Carbon::setLocale('VI');
+@endphp
 @extends('layout.app')
 @section('tieudetrang')
 {{$page -> tieuDe}}
@@ -6,7 +9,7 @@
 <nav aria-label="breadcrumb" class="bg-gray-50">
     <ol class="breadcrumb container">
         <li class="breadcrumb-item"><a class="a" href="{{route('home')}}">Home</a></li>
-        <li class="breadcrumb-item"><a class="a" href="{{route('blogs',['ten' => $namepage->moTa])}}">{{$namepage->ten}}</a></li>
+        <li class="breadcrumb-item"><a class="a" href="{{route('blogs',['ten' => $namepage->url])}}">{{$namepage->ten}}</a></li>
         <li class="breadcrumb-item active" aria-current="page">{{$page -> tieuDe}}</li>
     </ol>
 </nav>
@@ -21,43 +24,18 @@
                             <img class="img-fluid" src="{{ asset('assets/img/blog/single_blog_1.png')}}" alt="">
                         </div>
                         <div class="blog_details">
-                            <h2>Second divided from form fish beast made every of seas
-                                all gathered us saying he our
+                            <h2>{{$page -> tieuDe}}
                             </h2>
-                            <ul class="blog-info-link mt-3 mb-4">
-                                <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                            <ul class="blog-info-link mt-3 mb-4 ">
+                                <li><a href="#"><i class="fa fa-user"></i>{{\App\Models\User::find($page -> nguoiDangId)->name}} </a></li>
                                 <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                <li class="float-right"><a href="#"><i class="fa fa-clock"></i>{{ucfirst(\Carbon\Carbon::parse($page -> created_at)->translatedFormat('l'))}} , {{$page -> created_at->format('d-m-Y H:i')}} (GMT+7)</a></li>
                             </ul>
-                            <p class="excert">
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                                fraction of the camp price. However, who has the willpower
+                            <p  style="font-size: 18px;color:black;">
+                            {{$page -> moTa}}
                             </p>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                                fraction of the camp price. However, who has the willpower to actually sit through a
-                                self-imposed MCSE training. who has the willpower to actually
-                            </p>
-                            <div class="quote-wrapper">
-                                <div class="quotes">
-                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                    should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                                    a fraction of the camp price. However, who has the willpower to actually sit through a
-                                    self-imposed MCSE training.
-                                </div>
-                            </div>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                                fraction of the camp price. However, who has the willpower
-                            </p>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                                fraction of the camp price. However, who has the willpower to actually sit through a
-                                self-imposed MCSE training. who has the willpower to actually
-                            </p>
+                            {!!$page -> noiDung!!}
+
                         </div>
                     </div>
                     <div class="navigation-top">

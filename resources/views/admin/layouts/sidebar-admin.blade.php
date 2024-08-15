@@ -36,99 +36,69 @@
                     <h4 class="text-section">Components</h4>
                 </li>
                 <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#base">
+                    <a data-bs-toggle="collapse" href="#ql-account">
                         <i class="fas fa-layer-group"></i>
                         <p>Quản lý tài khoản</p>
                         <span class="caret"></span>
                     </a>
-                    <div class="collapse" id="base">
+                    <div class="collapse" id="ql-account">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="{{route( 'admin.account')}}">
-                                    <span class="sub-item">Tài khoản admin</span>
+                                <a href="{{route('admin.account')}}">
+                                    <span class="sub-item">Tất cả tài khoản</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <span class="sub-item">Tài khoản người dùng</span>
+                                    <span class="sub-item">phân quyền tài khoản</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#sql-loaitin">
+                        <i class="fas fa-th-list"></i>
+                        <p>Quản lý loại tin</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="sql-loaitin">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="{{route('admin.category')}}">
+                                    <span class="sub-item">Tất cả loại tin</span>
                                 </a>
                             </li>
                             <!-- <li>
-                                <a href="components/gridsystem.html">
-                                    <span class="sub-item">Grid System</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/panels.html">
-                                    <span class="sub-item">Panels</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/notifications.html">
-                                    <span class="sub-item">Notifications</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/sweetalert.html">
-                                    <span class="sub-item">Sweet Alert</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/font-awesome-icons.html">
-                                    <span class="sub-item">Font Awesome Icons</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/simple-line-icons.html">
-                                    <span class="sub-item">Simple Line Icons</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="components/typography.html">
-                                    <span class="sub-item">Typography</span>
-                                </a>
-                            </li>-->
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarLayouts">
-                        <i class="fas fa-th-list"></i>
-                        <p>Sidebar Layouts</p>
-                        <span class="caret"></span>
-                    </a>
-                    <div class="collapse" id="sidebarLayouts">
-                        <ul class="nav nav-collapse">
-                            <li>
-                                <a href="sidebar-style-2.html">
-                                    <span class="sub-item">Sidebar Style 2</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="icon-menu.html">
                                     <span class="sub-item">Icon Menu</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#forms">
+                    <a data-bs-toggle="collapse" href="#ql-blog">
                         <i class="fas fa-pen-square"></i>
-                        <p>Forms</p>
+                        <p>Quản lý tin</p>
                         <span class="caret"></span>
                     </a>
-                    <div class="collapse" id="forms">
+                    <div class="collapse" id="ql-blog">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="forms/forms.html">
-                                    <span class="sub-item">Basic Form</span>
+                                <a href="{{route('admin.blog')}}">
+                                    <span class="sub-item">Tất cả bài viết</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('admin.blog.create')}}">
+                                    <span class="sub-item">Thêm mới bài viết</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a data-bs-toggle="collapse" href="#tables">
                         <i class="fas fa-table"></i>
                         <p>Tables</p>
@@ -255,7 +225,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

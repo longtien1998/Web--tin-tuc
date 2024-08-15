@@ -1,8 +1,8 @@
 @php
 use Illuminate\Support\Facades\DB;
 $loaitin_ar = DB::table('theloaitin')
-->select('id', 'ten','thuTu','moTa')
-->limit(7)
+->select('id', 'ten','thuTu','url')
+->limit(8)
 ->orderBy('thuTu', 'asc')
 ->get();
 @endphp
@@ -13,7 +13,7 @@ $loaitin_ar = DB::table('theloaitin')
         <ul id="navigation">
             <li><a href="{{route('home')}}">Trang chủ</a></li>
             @foreach ($loaitin_ar as $loaitin)
-            <li><a href="{{route('blogs',['ten' => $loaitin->moTa])}}">{{$loaitin->ten}}</a></li>
+            <li><a href="{{route('blogs',['ten' => $loaitin->url])}}">{{$loaitin->ten}}</a></li>
             @endforeach
         </ul>
     </nav>

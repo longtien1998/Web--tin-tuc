@@ -37,10 +37,13 @@
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9 d-none d-md-block">
                             <div class="header-banner row align-items-center">
-                                <div class="col-xl-8 col-lg-8 col-md-8">
-                                    <form class="form-inline my-2 my-lg-0 ">
-                                        <input class="form-control mr-sm-2 col-8" type="search" placeholder="Nhập để tìm kiếm..." aria-label="Search">
-                                        <button class="btn btn-outline-success " type="button">Tìm kiếm</button>
+                                <div class="col-xl-8 col-lg-8 col-md-8 search">
+                                    <form class="form-inline my-2 my-lg-0">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Nhập để tìm kiếm..." aria-label="Search">
+                                        <button class="btn btn-outline-success" type="button">
+                                            <span class="d-none d-xl-block">Tìm kiếm</span>
+                                            <i class="bi bi-search d-block d-xl-none"></i>
+                                        </button>
                                     </form>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-4 ">
@@ -89,7 +92,7 @@
             <div class="header-bottom header-sticky">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
+                        <div class="col-xl-12 col-lg-12 col-md-12 header-flex">
                             <!-- sticky -->
                             <div class="sticky-logo">
                                 <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" alt=""></a>

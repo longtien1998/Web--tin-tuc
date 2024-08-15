@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('theloaitin', function (Blueprint $table) {
-            $table->id();
-            $table->string('lang', 5);
-            $table->string('ten', 255);
-            $table->integer('thuTu');
-            $table->string('moTa', 255);
-            
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('thelaoitin')) {
+            Schema::create('theloaitin', function (Blueprint $table) {
+                $table->id();
+                $table->string('lang', 5);
+                $table->string('ten', 255);
+                $table->Integer('thuTu');
+                $table->string('url', 255)->unique();
+                $table->timestamps();
+                $table->timestamp('deleted_at')->nullable();
+            });
+        }
     }
 
     /**

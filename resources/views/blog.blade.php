@@ -27,7 +27,7 @@ Tin tức {{$namepage->ten}}
                         </div>
 
                         <div class="blog_details">
-                            <a class="d-inline-block" href="{{route('blogdetail',['ten'=>$namepage->moTa ,'tieude'=> "tin-the-thao-moi-nhat"])}}">
+                            <a class="d-inline-block" href="{{route('blogdetail',['ten'=>$namepage->url ,'tieude'=> "tin-the-thao-moi-nhat"])}}">
                             <!-- <a class="d-inline-block" href="/{{$namepage->moTa}}/{{_('tin-moi')}}"> -->
 
                                 <h2>Google inks pact for new 35-storey office</h2>

@@ -26,26 +26,36 @@
 
 
     <style>
-        .search .btn {
-            width: 120px;
+        @media (min-width: 1200px) {
+            .search .btn {
+                width: 25%;
+            }
         }
-
+        @media (max-width: 1200px) {
+            .search .btn {
+                height: 50px;
+            }
+            .btn-outline-success{
+                padding: 5px;
+            }
+        }
         .bi-suit-heart,
-        .bi-person-circle
+        .bi-person-circle,
+        .bi-search
          {
-            font-size: 35px;
+            font-size: 30px;
         }
 
         .bi-suit-heart>span {
             font-size: 10px;
         }
-        .btn {
+        /* .btn {
             border-radius: 5px;
             padding: 25px 40px;
-        }
+        } */
         .form-inline .form-control{
            height: 50px;
-           /* width: 75%; */
+           width: 70%;
         }
         .show>li>a{
             line-height: 30px;
@@ -78,6 +88,15 @@
             </div>
         </div>
     </div>
+    @if ($errors->any())
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <!-- Preloader Start -->
     @include('layout.header')
 

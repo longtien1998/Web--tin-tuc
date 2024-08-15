@@ -9,4 +9,10 @@ class Theloaitin extends Model
 {
     use HasFactory;
     protected $table = 'Theloaitin';
+    protected $fillable = [
+        'ten',
+        'url',
+        'lang',
+        'thuTu'
+    ];
 }

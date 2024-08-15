@@ -1,8 +1,4 @@
-@extends('admin.layouts.app-admin')
-@section('tieudetrang')
-Admin - Dashboard
-@endsection
-@section('noidung')
+
 <div class="container">
     <div class="page-inner">
         <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
@@ -16,7 +12,7 @@ Admin - Dashboard
             </div> -->
         </div>
         <div class="row">
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
                 <div class="card card-stats card-round">
                     <div class="card-body">
                         <div class="row align-items-center">
@@ -27,34 +23,34 @@ Admin - Dashboard
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
                                 <div class="numbers">
-                                    <p class="card-category">Visitors</p>
-                                    <h4 class="card-title">1,294</h4>
+                                    <p class="card-category">Tài khoản</p>
+                                    <h4 class="card-title">{{\App\Models\User::count()}}</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
                 <div class="card card-stats card-round">
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-icon">
                                 <div class="icon-big text-center icon-info bubble-shadow-small">
-                                    <i class="fas fa-user-check"></i>
+                                    <i class="fas fa-th-large"></i>
                                 </div>
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
                                 <div class="numbers">
-                                    <p class="card-category">Subscribers</p>
-                                    <h4 class="card-title">1303</h4>
+                                    <p class="card-category">Danh mục</p>
+                                    <h4 class="card-title">{{\App\Models\Theloaitin::count()}}</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
                 <div class="card card-stats card-round">
                     <div class="card-body">
                         <div class="row align-items-center">
@@ -65,15 +61,15 @@ Admin - Dashboard
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
                                 <div class="numbers">
-                                    <p class="card-category">Sales</p>
-                                    <h4 class="card-title">$ 1,345</h4>
+                                    <p class="card-category">Bài viết</p>
+                                    <h4 class="card-title">{{\App\Models\Tin::count()}}</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
+            <!-- <div class="col-sm-6 col-md-3">
                 <div class="card card-stats card-round">
                     <div class="card-body">
                         <div class="row align-items-center">
@@ -91,7 +87,7 @@ Admin - Dashboard
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="row">
             <div class="col-md-8">
@@ -513,22 +509,4 @@ Admin - Dashboard
     </div>
 </div>
 
-@endsection
-@section('notify')
-<script>
-    //Notify
-    "use strict";
-    $.notify({
-        icon: 'icon-bell',
-        title: 'Admin',
-        message: 'Chào mừng đến với trang quản trị ADMIN',
-    }, {
-        type: 'secondary',
-        placement: {
-            from: "top",
-            align: "right"
-        },
-        time: 1000,
-    });
-</script>
-@endsection
+

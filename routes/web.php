@@ -31,6 +31,25 @@ Route::group(['prefix' => 'quan-tri', 'middleware' => ['auth', 'quantri']], func
     Route::get('/account/{id}/edit', [\App\Http\Controllers\Admin\AccountController::class,'edit'])->name('admin.account.edit');
     Route::put('/account/{id}/update', [\App\Http\Controllers\Admin\AccountController::class,'update'])->name('admin.account.update');
     Route::delete('/account/{id}/delete', [\App\Http\Controllers\Admin\AccountController::class,'destroy'])->name('admin.account.delete');
+    Route::post('/account/save-lever', [\App\Http\Controllers\Admin\AccountController::class,'savelever'])->name('admin.account.savelever');
+
+
+    // category
+    Route::get('/category', [\App\Http\Controllers\Admin\CategoryBlogsController::class,'index'])->name('admin.category');
+    Route::get('/category/create', [\App\Http\Controllers\Admin\CategoryBlogsController::class,'create'])->name('admin.category.create');
+    Route::post('/category/store', [\App\Http\Controllers\Admin\CategoryBlogsController::class,'store'])->name('admin.category.store');
+    Route::get('/category/{id}/edit', [\App\Http\Controllers\Admin\CategoryBlogsController::class,'edit'])->name('admin.category.edit');
+    Route::put('/category/{id}/update', [\App\Http\Controllers\Admin\CategoryBlogsController::class,'update'])->name('admin.category.update');
+    Route::delete('/category/{id}/delete', [\App\Http\Controllers\Admin\CategoryBlogsController::class,'destroy'])->name('admin.category.delete');
+
+
+    // blog
+    Route::get('/blog', [\App\Http\Controllers\Admin\BlogController::class,'index'])->name('admin.blog');
+    Route::get('/blog/create', [\App\Http\Controllers\Admin\BlogController::class,'create'])->name('admin.blog.create');
+    Route::post('/blog/store', [\App\Http\Controllers\Admin\BlogController::class,'store'])->name('admin.blog.store');
+    Route::get('/blog/{id}/edit', [\App\Http\Controllers\Admin\BlogController::class,'edit'])->name('admin.blog.edit');
+    Route::put('/blog/{id}/update', [\App\Http\Controllers\Admin\BlogController::class,'update'])->name('admin.blog.update');
+    Route::delete('/blog/{id}/delete', [\App\Http\Controllers\Admin\BlogController::class,'destroy'])->name('admin.blog.delete');
 });
 require __DIR__.'/auth.php';
 

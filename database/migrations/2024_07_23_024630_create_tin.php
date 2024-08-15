@@ -11,24 +11,27 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tin', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('lang', 5);
-            $table->string('tieuDe', 255);
-            $table->string('url', 255);
-            $table->string('tomTat', 255);
-            $table->string('urlhinhAnh', 255);
-            $table->text('noiDung');
-            $table->unsignedBigInteger('loaiTinId');
-            $table->foreign('loaiTinId')->references('id')->on('theloaitin')->onDelete('cascade');
-            $table->unsignedBigInteger('nguoiDangId');
-            $table->foreign('nguoiDangId')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('soLanXem');
-            $table->boolean('noiBat')->default(0);
-            $table->boolean('anHien')->default(1);
-            $table->string('tags',150);
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('tin')) {
+            Schema::create('tin', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->string('lang', 5);
+                $table->string('tieuDe', 255);
+                $table->string('url', 255)->unique();
+                $table->string('tomTat', 255);
+                $table->string('hinhAnh', 255);
+                $table->longText('noiDung');
+                $table->unsignedBigInteger('loaiTinId');
+                $table->foreign('loaiTinId')->references('id')->on('theloaitin')->onDelete('cascade');
+                $table->unsignedBigInteger('nguoiDangId');
+                $table->foreign('nguoiDangId')->references('id')->on('users')->onDelete('cascade');
+                $table->integer('soLanXem')->default(0);
+                $table->boolean('noiBat')->default(0);
+                $table->boolean('anHien')->default(0);
+                $table->string('tags', 150)->nullable();
+                $table->timestamps();
+                $table->timestamp('deleted_at')->nullable();
+            });
+        }
     }
 
     /**

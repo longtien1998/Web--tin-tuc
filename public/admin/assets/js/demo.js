@@ -188,7 +188,22 @@ Circles.create({
 	styleWrapper: true,
 	styleText:    true
 })
+if(window.location.href.includes("quan-tri/account") || window.location.href.includes("quan-tri/blog") || window.location.href.includes("quan-tri/category")){
 
+} else {
+    $.notify({
+        icon: 'icon-bell',
+        title: 'Admin',
+        message: 'Chào mừng đến với trang quản trị ADMIN',
+    }, {
+        type: 'secondary',
+        placement: {
+            from: "top",
+            align: "right"
+        },
+        time: 1000,
+    });
+}
 
 
 // Jsvectormap

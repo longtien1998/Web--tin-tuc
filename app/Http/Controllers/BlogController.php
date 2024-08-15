@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function index($moTa){
-        $namepage = Theloaitin::where('moTa', $moTa)->first();
+    public function index($url){
+        $namepage = Theloaitin::where('url', $url)->first();
         return view('blog',['namepage' => $namepage]);
     }
     public function show(){
         // dd($url);
         // echo 'hihihihihihih';
-        // $namepage = Theloaitin::where('moTa', $url->ten)->first();
+        // $namepage = Theloaitin::where('url', $url->ten)->first();
         // dd($namepage);
         // if($namepage == null) abort(404);
         // return view('blog',['namepage' => $namepage]);

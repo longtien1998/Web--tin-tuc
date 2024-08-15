@@ -3,15 +3,7 @@
 Trang chủ tin tức
 @endsection
 @section('noidung')
-@if ($errors->any())
-    <div class="alert alert-danger" role="alert">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+
 <main>
    <!-- Trending Area Start -->
    <div class="trending-area fix pt-25 gray-bg">
